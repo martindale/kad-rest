@@ -12,7 +12,6 @@ var config = {
   "express": {
     "port": 3000
   },
-  "instanceId": instanceId,
   "name": pkg.name
 }
 
