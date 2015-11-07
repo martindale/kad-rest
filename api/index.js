@@ -6,7 +6,7 @@ var kademlia = require('kad');
 var kadConfig = config.get('kad');
 var levelup = require('levelup');
 
-kadConfig.storage = levelup('/tmp/'+ config.get('name');
+kadConfig.storage = levelup('/tmp/'+ config.get('name'));
 
 var dht = kademlia(kadConfig);
 
