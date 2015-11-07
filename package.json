@@ -1,0 +1,22 @@
+{
+  "name": "kad-rest",
+  "version": "1.0.0",
+  "description": "REST wrapper around Kad",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ian Patton",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "config": "^1.16.0",
+    "express": "^4.13.3",
+    "kad": "^0.7.0",
+    "leveldown": "^1.4.2",
+    "levelup": "^1.2.1",
+    "winston": "^2.1.0"
+  },
+  "repository": "https://github.com/niahmiah/kad-rest"
+}
