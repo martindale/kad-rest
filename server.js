@@ -12,7 +12,6 @@ app.get('/:hash', api.get);
 app.put('/:hash', api.put);
 
 app.use(express.static('public'));
-var lb = app.listen(3000);
 var server = app.listen(config.get('express.port'));
 log.info('Started express server on ' + config.get('express.port'));
 
