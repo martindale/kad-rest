@@ -4,13 +4,13 @@ var pkg = require('../package.json');
 
 var config = {
   "kad": {
-    "address": "127.0.0.1",
-    "port": 35000,
+    "address": "0.0.0.0",
+    "port": process.env.KADPORT || 35000,
     "seeds": [],
     "logLevel": 2
   },
   "express": {
-    "port": 3000
+    "port": process.env.PORT || 3000
   },
   "name": pkg.name
 }
