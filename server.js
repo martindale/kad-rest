@@ -8,15 +8,14 @@ var api = require('./api/index');
 var bodyParser = require('body-parser')
 
 app.use(bodyParser.json());
-app.get('/:hash', api.get);
-app.put('/:hash', api.put);
-
-//Enable CORS
 app.use(function(req, res, next) {
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
   next();
 });
+
+app.get('/:hash', api.get);
+app.put('/:hash', api.put);
 
 var server = app.listen(config.get('express.port'));
 log.info('Started express server on ' + config.get('express.port'));
