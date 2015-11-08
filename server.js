@@ -11,7 +11,13 @@ app.use(bodyParser.json());
 app.get('/:hash', api.get);
 app.put('/:hash', api.put);
 
-app.use(express.static('public'));
+//Enable CORS
+app.use(function(req, res, next) {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  next();
+});
+
 var server = app.listen(config.get('express.port'));
 log.info('Started express server on ' + config.get('express.port'));
 
