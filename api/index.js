@@ -3,7 +3,7 @@
 var config = require('config');
 var log = require('../lib/log');
 var kademlia = require('kad');
-kademlia.constants.T_RESPONSETIMEOUT = 5 * 1000;
+kademlia.constants.T_RESPONSETIMEOUT = process.env.RESPONSETIMEOUT || 30 * 1000;
 var kadConfig = config.get('kad');
 var levelup = require('levelup');
 
